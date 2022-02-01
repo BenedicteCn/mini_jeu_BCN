@@ -40,6 +40,7 @@ while player3.life_points >0 && (player1.life_points > 0 || player2.life_points 
   puts "\n"
   puts "--------------------------"
   choice = gets.chomp.to_s
+
     if choice == "a" then
       player3.search_weapon
       elsif choice == "s"
@@ -53,7 +54,8 @@ while player3.life_points >0 && (player1.life_points > 0 || player2.life_points 
       else !choice == "a" && !choice == "s" && !choice == "0" && !choice == "1"
       puts "choisi entre a, s, 0 et 1 stp"
     end
-puts "Les autres joueurs t'attaquent !"
+
+  puts "Les autres joueurs t'attaquent !"
   player1.attacks(player3)
     break if player2.life_points <= 0
   player2.attacks(player3)

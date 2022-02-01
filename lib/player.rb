@@ -56,7 +56,7 @@ class HumanPlayer < Player # deuxième classe pour le joueur humain
   def search_weapon #méthode pour avoir une meilleure arme que celle possedée actuellement
     new_weapon_level = rand(1..6)
     puts "Tu as trouvé une arme de niveau #{new_weapon_level}"
-      if new_weapon_level > weapon_level then weapon_level = new_weapon_level
+      if new_weapon_level > weapon_level then @weapon_level = new_weapon_level
         puts "Youhou ! elle est meilleure que ton arme actuelle : tu l'as prends."
         else
         puts "M@*#$... elle n'est pas mieux que ton arme actuelle..."
