@@ -53,7 +53,7 @@ class HumanPlayer < Player # deuxième classe pour le joueur humain
     rand(1..6) * @weapon_level
   end
 
-  def search_weapon
+  def search_weapon #méthode pour avoir une meilleure arme que celle possedée actuellement
     new_weapon_level = rand(1..6)
     puts "Tu as trouvé une arme de niveau #{new_weapon_level}"
       if new_weapon_level > weapon_level then weapon_level = new_weapon_level
@@ -83,6 +83,6 @@ class HumanPlayer < Player # deuxième classe pour le joueur humain
   end
 end
 
-player3 = HumanPlayer.new("bbbb")
-player3.search_weapon
-puts player3.show_state
+#player3 = HumanPlayer.new("bbbb")
+#player3.search_health_pack
+#puts player3.show_state

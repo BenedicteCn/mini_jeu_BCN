@@ -21,7 +21,7 @@ player2 = Player.new("José")
 enemies << player2
 player3 = HumanPlayer.new("#{prénom}") # on crée le joueur humain
 
-while player3.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
+while player3.life_points >0 && (player1.life_points > 0 || player2.life_points >0) do
   puts "\n"
   puts "--------------------------"
   puts ">>>Voici l'état de chaque joueur : "
@@ -54,9 +54,9 @@ while player3.life_points >0 && (player1.life_points > 0 || player2.life_points 
       puts "choisi entre a, s, 0 et 1 stp"
     end
 puts "Les autres joueurs t'attaquent !"
-  player1.attacks(player2)
+  player1.attacks(player3)
     break if player2.life_points <= 0
-  player2.attacks(player1)
+  player2.attacks(player3)
   break if player1.life_points <= 0
 
 end
